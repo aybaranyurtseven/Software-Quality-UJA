@@ -1,0 +1,4 @@
+<map id="vehiculos::rellenarVector" name="vehiculos::rellenarVector">
+<area shape="rect" id="node1" title="fills a vector" alt="" coords="5,5,169,33"/>
+<area shape="rect" id="node2" href="$namespacevehiculos.html#ac27e2fe1a17d085fdee16a9239f91121" title="Prompts the user for a vehicle&#39;s data and stores it in the provided structure." alt="" coords="217,5,387,33"/>
+</map>

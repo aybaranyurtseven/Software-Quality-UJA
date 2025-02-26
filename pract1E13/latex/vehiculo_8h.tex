@@ -1,0 +1,170 @@
+\hypertarget{vehiculo_8h}{}\doxysection{vehiculo.\+h File Reference}
+\label{vehiculo_8h}\index{vehiculo.h@{vehiculo.h}}
+
+
+Definitions and functions for vehicle management.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvehiculos_1_1_vehiculo}{vehiculos\+::\+Vehiculo}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{vehiculo_8h_ac27e2fe1a17d085fdee16a9239f91121}{vehiculos\+::\+Lee\+Por\+Teclado}} (Vehiculo \&p)
+\begin{DoxyCompactList}\small\item\em Prompts the user for a vehicle\textquotesingle{}s data and stores it in the provided structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vehiculo_8h_a9e2f9b7790f0c06789a52081d9ba2834}{vehiculos\+::rellenar\+Vector}} (Vehiculo v\mbox{[}$\,$\mbox{]}, int tamv)
+\begin{DoxyCompactList}\small\item\em fills a vector \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vehiculo_8h_aa539682011e051a3649e89a43e455b56}{vehiculos\+::muestra\+En\+Pantalla}} (const Vehiculo \&p)
+\begin{DoxyCompactList}\small\item\em shown on screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{vehiculo_8h_a87080192de9ba022c061d3e5d01b03b6}{vehiculos\+::mostrar\+En\+Pantalla}} (const Vehiculo $\ast$v, int tamv)
+\begin{DoxyCompactList}\small\item\em shown on screen \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{vehiculo_8h_ae1a342a74e0185c844577c0e1a72449f}{vehiculos\+::\+Max\+Precio}} (Vehiculo p\mbox{[}$\,$\mbox{]}, int tamv)
+\begin{DoxyCompactList}\small\item\em shows the highest priced car \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{vehiculo_8h_a94b35208c245e810a92ee5d6187a0bab}\label{vehiculo_8h_a94b35208c245e810a92ee5d6187a0bab}} 
+int {\bfseries vehiculos\+::buscar\+Por\+Matricula} (string matricula, Vehiculo v\mbox{[}$\,$\mbox{]}, int tamv)
+\item 
+void \mbox{\hyperlink{vehiculo_8h_af701b82b83a863cfa71cb309e198ea0d}{vehiculos\+::carga\+En\+Transporte}} (Vehiculo v\mbox{[}$\,$\mbox{]}, int n\+Vehiculos)
+\begin{DoxyCompactList}\small\item\em sum of weight \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definitions and functions for vehicle management. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vehiculo_8h_file_af701b82b83a863cfa71cb309e198ea0d}\label{vehiculo_8h_file_af701b82b83a863cfa71cb309e198ea0d}} 
+\index{vehiculo.h@{vehiculo.h}!cargaEnTransporte@{cargaEnTransporte}}
+\index{cargaEnTransporte@{cargaEnTransporte}!vehiculo.h@{vehiculo.h}}
+\doxysubsubsection{\texorpdfstring{cargaEnTransporte()}{cargaEnTransporte()}}
+{\footnotesize\ttfamily void vehiculos\+::carga\+En\+Transporte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvehiculos_1_1_vehiculo}{Vehiculo}}}]{v\mbox{[}$\,$\mbox{]},  }\item[{int}]{n\+Vehiculos }\end{DoxyParamCaption})}
+
+
+
+sum of weight 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to a \mbox{\hyperlink{struct_vehicle}{Vehicle}} object where the entered data will be saved. \\
+\hline
+ & {\em n\+Vehicles} & number of vehicles we want to sum their wight \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+adds the weight of all the vehicles and if it exceeds 10,000kg it will throw an exception 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{vehiculo_8h_file_ac27e2fe1a17d085fdee16a9239f91121}\label{vehiculo_8h_file_ac27e2fe1a17d085fdee16a9239f91121}} 
+\index{vehiculo.h@{vehiculo.h}!LeePorTeclado@{LeePorTeclado}}
+\index{LeePorTeclado@{LeePorTeclado}!vehiculo.h@{vehiculo.h}}
+\doxysubsubsection{\texorpdfstring{LeePorTeclado()}{LeePorTeclado()}}
+{\footnotesize\ttfamily void vehiculos\+::\+Lee\+Por\+Teclado (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvehiculos_1_1_vehiculo}{Vehiculo}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Prompts the user for a vehicle\textquotesingle{}s data and stores it in the provided structure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p} & Reference to a \mbox{\hyperlink{struct_vehicle}{Vehicle}} object where the entered data will be saved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+The {\ttfamily p} object will contain the data entered by the user, as long as it is valid.
+\end{DoxyPostcond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em string} & If the flag is less than 3 or more than 20 characters. \\
+\hline
+{\em string} & If the model is less than 1 or more than 30 characters. \\
+\hline
+{\em string} & If the license plate does not have exactly 6 characters. \\
+\hline
+{\em string} & If the price is negative. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{vehiculo_8h_file_ae1a342a74e0185c844577c0e1a72449f}\label{vehiculo_8h_file_ae1a342a74e0185c844577c0e1a72449f}} 
+\index{vehiculo.h@{vehiculo.h}!MaxPrecio@{MaxPrecio}}
+\index{MaxPrecio@{MaxPrecio}!vehiculo.h@{vehiculo.h}}
+\doxysubsubsection{\texorpdfstring{MaxPrecio()}{MaxPrecio()}}
+{\footnotesize\ttfamily int vehiculos\+::\+Max\+Precio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvehiculos_1_1_vehiculo}{Vehiculo}}}]{p\mbox{[}$\,$\mbox{]},  }\item[{int}]{tamv }\end{DoxyParamCaption})}
+
+
+
+shows the highest priced car 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em p} & Reference to a \mbox{\hyperlink{struct_vehicle}{Vehicle}} object where the entered data will be saved. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tamv} & Size of the vector that we are going to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+shows the highest priced car 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+pos , is the position where it is the car with the highest price 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vehiculo_8h_file_a87080192de9ba022c061d3e5d01b03b6}\label{vehiculo_8h_file_a87080192de9ba022c061d3e5d01b03b6}} 
+\index{vehiculo.h@{vehiculo.h}!mostrarEnPantalla@{mostrarEnPantalla}}
+\index{mostrarEnPantalla@{mostrarEnPantalla}!vehiculo.h@{vehiculo.h}}
+\doxysubsubsection{\texorpdfstring{mostrarEnPantalla()}{mostrarEnPantalla()}}
+{\footnotesize\ttfamily void vehiculos\+::mostrar\+En\+Pantalla (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structvehiculos_1_1_vehiculo}{Vehiculo}} $\ast$}]{v,  }\item[{int}]{tamv }\end{DoxyParamCaption})}
+
+
+
+shown on screen 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to a \mbox{\hyperlink{struct_vehicle}{Vehicle}} object where the entered data will be saved. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tamv} & Size of the vector that we are going to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+shows the cars on the screen 5 by 5 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{vehiculo_8h_file_aa539682011e051a3649e89a43e455b56}\label{vehiculo_8h_file_aa539682011e051a3649e89a43e455b56}} 
+\index{vehiculo.h@{vehiculo.h}!muestraEnPantalla@{muestraEnPantalla}}
+\index{muestraEnPantalla@{muestraEnPantalla}!vehiculo.h@{vehiculo.h}}
+\doxysubsubsection{\texorpdfstring{muestraEnPantalla()}{muestraEnPantalla()}}
+{\footnotesize\ttfamily void vehiculos\+::muestra\+En\+Pantalla (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structvehiculos_1_1_vehiculo}{Vehiculo}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+shown on screen 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to a \mbox{\hyperlink{struct_vehicle}{Vehicle}} object where the entered data will be saved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+shows all the cars entered on the screen 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{vehiculo_8h_file_a9e2f9b7790f0c06789a52081d9ba2834}\label{vehiculo_8h_file_a9e2f9b7790f0c06789a52081d9ba2834}} 
+\index{vehiculo.h@{vehiculo.h}!rellenarVector@{rellenarVector}}
+\index{rellenarVector@{rellenarVector}!vehiculo.h@{vehiculo.h}}
+\doxysubsubsection{\texorpdfstring{rellenarVector()}{rellenarVector()}}
+{\footnotesize\ttfamily void vehiculos\+::rellenar\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvehiculos_1_1_vehiculo}{Vehiculo}}}]{v\mbox{[}$\,$\mbox{]},  }\item[{int}]{tamv }\end{DoxyParamCaption})}
+
+
+
+fills a vector 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Reference to a \mbox{\hyperlink{struct_vehicle}{Vehicle}} object where the entered data will be saved. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tamv} & Size of the vector that we are going to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+fills the vector by calling the Read\+By\+Keyboard function 
+\end{DoxyPostcond}
