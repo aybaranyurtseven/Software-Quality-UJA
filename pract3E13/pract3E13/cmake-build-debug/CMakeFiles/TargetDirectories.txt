@@ -1,0 +1,3 @@
+C:/Universidad/2anio/2cuatri/poo/practicas/practica1/cmake-build-debug/CMakeFiles/a.dir
+C:/Universidad/2anio/2cuatri/poo/practicas/practica1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Universidad/2anio/2cuatri/poo/practicas/practica1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

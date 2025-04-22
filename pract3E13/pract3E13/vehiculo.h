@@ -1,12 +1,8 @@
 //
 // Created by Lydia on 17/02/2022.
 //
-/**
- * @file vehiculo.h
- * @brief Definitions and functions for vehicle management.
- */
-// DCL51-CPP 
-#ifndef A_VEHICULO_H 
+
+#ifndef A_VEHICULO_H
 #define A_VEHICULO_H
 
 
@@ -14,14 +10,7 @@
 #include <string>
 
 using  namespace std;
-
 namespace vehiculos {
-/**
-     * @struct Vehicle
-     * @brief Represents a vehicle with its main characteristics.
-     * **/
-
-    //OOP53-CPP
     struct Vehiculo {
         string marca;
         string modelo;
@@ -30,17 +19,6 @@ namespace vehiculos {
         float precio;
         float peso;
     };
-    //ERR56-CPP
-    Vehiculo& operator=( const Vehiculo &v){
-        int *a=nullptr;
-        if (v){
-            a= new Vehiculo;
-            a=v;
-        }
-        delete[] v;
-        v=a;
-        return *this;
-    }
     void LeePorTeclado (Vehiculo &p);
     void rellenarVector (Vehiculo v[], int tamv);
     void muestraEnPantalla(const Vehiculo  &p);
